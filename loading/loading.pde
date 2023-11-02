@@ -9,23 +9,21 @@ void setup(){
 }
 
 void draw(){
-  fill(#350000, 3);
+  fill(#350000, 25);
   
   rect(0, 0, width, height);
   
-  int ballSize = 16;
+  int ballSize = 40;
   
-  float animationSpeed = frameCount * 0.06;
+  float animationSpeed = frameCount * 0.09;
   
   fill(255);
   translate(width/2, height/2);
-  textSize(200);
+  textSize(75);
   textAlign(CENTER);
-  text("HELLO", 0, 300);
-  circle(cos(-animationSpeed * 2) * 256, sin(-animationSpeed * 4) * 256, ballSize);
-  rotate(frameCount * 0.06);
+  text("LOADING, PLEASE WAIT...", 0, 215);
+  
+  rotate(animationSpeed);
   circle(loading.x, loading.y, ballSize);
-  
-  
   
 }
