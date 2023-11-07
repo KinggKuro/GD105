@@ -30,14 +30,13 @@ void draw(){
   //assigning animation speed variables
   float animationSpeed1 = frameCount * -1.50;
   float animationSpeed2 = frameCount * -0.25;
-  
+
   fill(255);
   translate(width/2, height/2);
-  //drawing the lines that lerp
-  
+
   noFill();
   stroke(255);
-  rotate(animationSpeed2);
+  rotate(frameCount * 0.03);
   rect(0, 0, 512, 512);
   
   fill(255);
