@@ -1,3 +1,5 @@
+//Declaring images used
+
 PImage background, arrancar;
 
 PVector ps4square;
@@ -6,6 +8,7 @@ PFont burbank;
 
 float animationSpeed, squareSize;
 
+//setup process
 void setup(){
   size(1920, 1076);
   background = loadImage("aizen1.png");
@@ -14,15 +17,16 @@ void setup(){
   
   animationSpeed = frameCount * 0.06;
   
-  ps4square = new PVector(1600, 0);
+  ps4square = new PVector(50, 0);
   
-  squareSize = 120;
+  squareSize = 275;
   
   textAlign(CENTER);
   textFont(burbank);
   
 }
 
+//et voila
 void draw(){
   image(background, 0, 0);
   image(arrancar, 1600, 35);
@@ -33,12 +37,9 @@ void draw(){
   text("There are only plain, hard facts.", width/2, 620);
   text("-Sosuke Aizen", width/2, 695);
   
+// attempt at rotating square
   noFill();
   stroke(255);
-  strokeWeight(8);
-  translate(width/2, height/2);
-  
-  rotate(animationSpeed);
-  square(ps4square.x, ps4square.y, squareSize);
-  
+  strokeWeight(12);
+  square(1608, 35, squareSize);
 }
