@@ -22,9 +22,9 @@ void draw(){
   }
   
   int b = 0;
-  while(b < 700){
+  while(b < 840){
     circle(0, 0, b);
-    b = b + 10;
+    b = b + 12;
   }
   
   int c = 0;
